@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="524.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CorreoController">
+   <children>
+      <Label layoutX="14.0" layoutY="43.0" text="Ingrese su correo ">
+         <font>
+            <Font name="Baskerville Old Face" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCorreo" layoutX="228.0" layoutY="44.0" prefHeight="27.0" prefWidth="255.0" />
+      <Separator layoutX="11.0" layoutY="129.0" prefHeight="0.0" prefWidth="503.0" />
+      <Button fx:id="btnEnviar" layoutX="228.0" layoutY="95.0" mnemonicParsing="false" onAction="#enviarCodigo" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Enviar código" textFill="WHITE" />
+      <Pane prefHeight="33.0" prefWidth="524.0" style="-fx-background-color: #479B9B;" />
+      <Label fx:id="lblCodigo" layoutX="14.0" layoutY="154.0" text="Ingrese el codigo enviado">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="228.0" layoutY="153.0" prefHeight="25.0" prefWidth="255.0" />
+      <Button fx:id="btnAceptar" layoutX="228.0" layoutY="205.0" mnemonicParsing="false" onAction="#validarCodigo" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Aceptar" textFill="WHITE" />
+      <Separator layoutX="14.0" layoutY="262.0" prefHeight="3.0" prefWidth="503.0" />
+      <TextField fx:id="txtIdentificacion" layoutX="228.0" layoutY="282.0" prefHeight="25.0" prefWidth="255.0" />
+      <Label fx:id="lblIdentificacion" layoutX="14.0" layoutY="284.0" text="Ingrese su identificación">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContraseña" layoutX="14.0" layoutY="324.0" text="Ingrese la nueva contraseña">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNuevaContraseña" layoutX="228.0" layoutY="323.0" prefHeight="25.0" prefWidth="255.0" />
+      <Button fx:id="btnAceptartContraseña" layoutX="228.0" layoutY="381.0" mnemonicParsing="false" onAction="#abrirLoginAdministrador" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Aceptar" textFill="WHITE" />
+   </children>
+</AnchorPane>

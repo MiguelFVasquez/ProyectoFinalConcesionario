@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="693.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmpleadoController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="1130.0" style="-fx-background-color: #479B9B;">
+         <children>
+            <Label layoutX="492.0" layoutY="7.0" prefHeight="45.0" prefWidth="272.0" text="Bienvenido/a" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TabPane layoutY="57.0" prefHeight="638.0" prefWidth="1130.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gestion de clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="645.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="110.0" layoutY="40.0" orientation="VERTICAL" prefHeight="560.0" prefWidth="679.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="215.0" layoutY="49.0" text="Nombre(s):">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="215.0" layoutY="87.0" text="Apellidos:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="215.0" layoutY="127.0" text="Cedula:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="210.0" layoutY="169.0" text="Fecha de nacimiento:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="txtNombreCliente" layoutX="467.0" layoutY="47.0" prefHeight="25.0" prefWidth="531.0" />
+                                    <TextField fx:id="txtApellidoCliente" layoutX="468.0" layoutY="85.0" prefHeight="25.0" prefWidth="529.0" />
+                                    <TextField fx:id="txtCedulaCliente" layoutX="468.0" layoutY="125.0" prefHeight="25.0" prefWidth="529.0" />
+                                    <Button fx:id="btnNuevo" layoutX="371.0" layoutY="230.0" mnemonicParsing="false" onAction="#nuevoCliente" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Nuevo" textFill="WHITE" />
+                                    <Button fx:id="btnActualizar" layoutX="467.0" layoutY="230.0" mnemonicParsing="false" onAction="#actualizarCliente" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Actualizar" textFill="WHITE" />
+                                    <Button fx:id="btnAgregar" layoutX="602.0" layoutY="230.0" mnemonicParsing="false" onAction="#agregarCliente" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Agregar" textFill="WHITE" />
+                                    <Label layoutX="17.0" layoutY="6.0" text="Informacion del cliente">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="14.0" />
+                                       </font></Label>
+                                    <Separator layoutX="14.0" layoutY="22.0" prefHeight="0.0" prefWidth="628.0" />
+                                    <Separator layoutX="155.0" layoutY="206.0" prefHeight="2.0" prefWidth="645.0" />
+                                    <Button fx:id="btnLimpiar" layoutX="725.0" layoutY="230.0" mnemonicParsing="false" onAction="#limpiarInfoCliente" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Limpiar" textFill="WHITE" />
+                                    <DatePicker fx:id="datePickerFechaNacimiento" layoutX="470.0" layoutY="167.0" prefHeight="25.0" prefWidth="526.0" />
+                                    <ImageView fitHeight="131.0" fitWidth="97.0" layoutX="50.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../cliente.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <TableView fx:id="tableViewClientes" layoutX="14.0" layoutY="48.0" prefHeight="178.0" prefWidth="1086.0">
+                                      <columns>
+                                        <TableColumn fx:id="columNombreCliente" prefWidth="75.0" text="Nombres" />
+                                        <TableColumn fx:id="columApellidosCliente" prefWidth="75.0" text="Apellidos" />
+                                          <TableColumn fx:id="columCedulaCliente" prefWidth="75.0" text="Cedula" />
+                                          <TableColumn fx:id="columFechaNacimiento" prefWidth="181.0" text="Fecha de nacimiento" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="btnEliminar" layoutX="667.0" layoutY="237.0" mnemonicParsing="false" onAction="#eliminarCliente" style="-fx-background-color: FF2D00; -fx-cursor: hand;" text="Eliminar" textFill="WHITE" />
+                                    <Label layoutX="31.0" layoutY="6.0" text="Listado de clientes">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="15.0" />
+                                       </font></Label>
+                                    <Separator layoutX="26.0" layoutY="31.0" prefHeight="4.0" prefWidth="625.0" />
+                                    <Button fx:id="btnVolver" layoutX="487.0" layoutY="237.0" mnemonicParsing="false" onAction="#mostrarVentanPrincipal" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Volver" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Gestion de vehiculos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="572.0" prefWidth="746.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Que tipo de vehiculo desea registrar" />
+                        <Label layoutX="14.0" layoutY="65.0" text="Tipo de transmicion del vehiculo" />
+                        <Label layoutX="14.0" layoutY="105.0" text="Estado del vehiculo" />
+                        <Label layoutX="29.0" layoutY="221.0" text="Marca" />
+                        <Label layoutX="29.0" layoutY="256.0" text="Modelo" />
+                        <Label layoutX="29.0" layoutY="295.0" text="Cambios" />
+                        <Label layoutX="21.0" layoutY="325.0" text="Velocidad Maxima(Km/h)" />
+                        <Label layoutX="27.0" layoutY="362.0" text="Cilindraje" />
+                        <Label layoutX="25.0" layoutY="394.0" text="Capacidad del maletero" />
+                        <Label layoutX="29.0" layoutY="466.0" text="Velocidad crucero" />
+                        <Label layoutX="25.0" layoutY="434.0" text="Número de bolsas de aire" />
+                        <Label layoutX="27.0" layoutY="492.0" text="ABS" />
+                        <Label layoutX="789.0" layoutY="200.0" text="Sensor de colision" />
+                        <ComboBox fx:id="comboBoxTipoVehiculo" layoutX="223.0" layoutY="15.0" onAction="#seleccionVehiculo" prefHeight="25.0" prefWidth="136.0" />
+                        <ComboBox fx:id="comboBoxTipoTransmicion" layoutX="223.0" layoutY="66.0" prefHeight="25.0" prefWidth="134.0" />
+                        <ComboBox fx:id="comboBoxEstado" layoutX="223.0" layoutY="106.0" prefHeight="28.0" prefWidth="136.0" />
+                        <Label layoutX="789.0" layoutY="246.0" text="Sensor de trafico cruzado" />
+                        <Label layoutX="790.0" layoutY="160.0" text="Asistente de carril" />
+                        <TextField fx:id="txtMarcaVehiculo" layoutX="164.0" layoutY="217.0" />
+                        <TextField fx:id="txtModeloVehiculo" layoutX="164.0" layoutY="252.0" />
+                        <TextField fx:id="txtCant_CambioVehiculo" layoutX="164.0" layoutY="291.0" />
+                        <TextField fx:id="txtVelMaxima" layoutX="164.0" layoutY="321.0" />
+                        <TextField fx:id="txtCilindraje" layoutX="164.0" layoutY="358.0" />
+                        <TextField fx:id="txtCap_Maletero" layoutX="164.0" layoutY="390.0" />
+                        <TextField fx:id="txtNum_bolsas" layoutX="170.0" layoutY="430.0" />
+                        <Label layoutX="420.0" layoutY="29.0" text="Numero de pasajeros" />
+                        <Label layoutX="425.0" layoutY="267.0" text="Es cuatroxcuatro" />
+                        <Label layoutX="420.0" layoutY="65.0" text="Numero de puertas" />
+                        <Label layoutX="420.0" layoutY="308.0" text="Capacidad de carga" />
+                        <Label layoutX="418.0" layoutY="394.0" text="Salidas de emergencia" />
+                        <Label layoutX="422.0" layoutY="354.0" text="Numero de ejes" />
+                        <Label layoutX="420.0" layoutY="150.0" text="Camara de reversa" />
+                        <Label layoutX="418.0" layoutY="106.0" text="Aire acondicionado" />
+                        <Label layoutX="420.0" layoutY="185.0" text="Caballos de fuerza" />
+                        <Label layoutX="420.0" layoutY="224.0" text="En cuanto alcanza los 100km/h" />
+                        <Label layoutX="423.0" layoutY="447.0" text="Tipo de camion" />
+                        <TextField fx:id="txtNumPasajeros" layoutX="606.0" layoutY="25.0" />
+                        <TextField fx:id="txtNumPuertas" layoutX="606.0" layoutY="62.0" />
+                        <TextField fx:id="txtCaballosFuerza" layoutX="606.0" layoutY="181.0" />
+                        <TextField fx:id="txt100km" layoutX="606.0" layoutY="220.0" />
+                        <TextField fx:id="txtCapacidadCarga" layoutX="606.0" layoutY="304.0" />
+                        <TextField fx:id="txtNumEjes" layoutX="606.0" layoutY="350.0" />
+                        <TextField fx:id="txtSalidasEmergencia" layoutX="606.0" layoutY="390.0" />
+                        <TextField fx:id="txtTipoCamion" layoutX="606.0" layoutY="443.0" />
+                        <Button fx:id="btnRegistrar" layoutX="552.0" layoutY="541.0" mnemonicParsing="false" onAction="#registrarVehiculo" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Registrar" textFill="WHITE" />
+                        <CheckBox fx:id="checkVelCrucer" layoutX="185.0" layoutY="466.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkABS" layoutX="186.0" layoutY="492.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkSensColision" layoutX="974.0" layoutY="198.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkSensTrafico" layoutX="974.0" layoutY="244.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkAireAcondicionado" layoutX="606.0" layoutY="106.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkCamReversa" layoutX="606.0" layoutY="150.0" mnemonicParsing="false" text="Si" />
+                        <CheckBox fx:id="checkAsistenteCarril" layoutX="974.0" layoutY="160.0" mnemonicParsing="false" text="Si" />
+                        <Label layoutX="16.0" layoutY="159.0" text="Tipo combustible" />
+                        <ComboBox fx:id="comboBoxCombustible" layoutX="220.0" layoutY="154.0" onAction="#seleccionCombustible" prefHeight="28.0" prefWidth="142.0" />
+                        <Label layoutX="788.0" layoutY="285.0" text="Autonomia carga completa" />
+                        <TextField fx:id="txtAutonomiaCarga" layoutX="950.0" layoutY="281.0" />
+                        <Separator layoutY="524.0" prefHeight="17.0" prefWidth="1128.0" />
+                        <TextField fx:id="txtPromedioCarga" layoutX="960.0" layoutY="106.0" />
+                        <CheckBox fx:id="checkCuatroPorCuatro" layoutX="606.0" layoutY="267.0" mnemonicParsing="false" text="Si" />
+                        <Label layoutX="798.0" layoutY="29.0" text="Es enchufable" />
+                        <CheckBox fx:id="checkEnchufable" layoutX="958.0" layoutY="32.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="31.0" text="Si" />
+                        <CheckBox fx:id="chekHibridoLigero" layoutX="958.0" layoutY="76.0" mnemonicParsing="false" text="Si" />
+                        <Label layoutX="799.0" layoutY="76.0" text="Es hibrido ligero" />
+                        <Label layoutX="799.0" layoutY="110.0" text="Tiempo promedio de carga" />
+                        <Label layoutX="790.0" layoutY="342.0" text="Precio" />
+                        <TextField fx:id="txtPrecio" layoutX="876.0" layoutY="342.0" prefHeight="25.0" prefWidth="223.0" />
+                        <Button fx:id="btnAniadirImagen" layoutX="788.0" layoutY="399.0" mnemonicParsing="false" onAction="#aniadirImagen" prefHeight="25.0" prefWidth="333.0" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Añadir imagen" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Lista Vehiculos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableViewVehiculos" layoutY="28.0" prefHeight="477.0" prefWidth="1115.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="28.0">
+                          <columns>
+                              <TableColumn fx:id="columnVehiculo" prefWidth="120.0" text="Vehiculo" />
+                            <TableColumn fx:id="columMarca" prefWidth="124.0" text="Marca" />
+                              <TableColumn fx:id="columModelo" prefWidth="153.0" text="Modelo" />
+                              <TableColumn fx:id="columPrecio" prefWidth="168.0" text="Precio" />
+                              <TableColumn fx:id="columEstado" prefWidth="168.0" text="Estado" />
+                              <TableColumn fx:id="columTipoCombustible" prefWidth="168.0" text="Tipo Combustible" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnVender" layoutX="421.0" layoutY="542.0" mnemonicParsing="false" onAction="#venderAuto" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Vender" textFill="WHITE" />
+                        <Button fx:id="btnAlquilar" layoutX="565.0" layoutY="542.0" mnemonicParsing="false" onAction="#alquilarAuto" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Alquilar" textFill="WHITE" />
+                        <Button fx:id="btnEliminarAuto" layoutX="720.0" layoutY="542.0" mnemonicParsing="false" onAction="#eliminarAuto" style="-fx-background-color: FF2D00; -fx-cursor: hand;" text="Eliminar" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Gestion de transacciones">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="35.0" layoutY="51.0" orientation="VERTICAL" prefHeight="602.0" prefWidth="1122.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="14.0" text="Información de la transacción">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="65.0" layoutY="62.0" text="Tipo de transacción" />
+                                    <Label layoutX="65.0" layoutY="100.0" text="Código" />
+                                    <Label layoutX="63.0" layoutY="140.0" text="Fecha" />
+                                    <Label layoutX="65.0" layoutY="196.0" text="Total" />
+                                    <ComboBox fx:id="comboBoxTipoTransaccion" layoutX="253.0" layoutY="58.0" prefHeight="25.0" prefWidth="303.0" />
+                                    <TextField fx:id="txtCodigo" layoutX="254.0" layoutY="96.0" prefHeight="25.0" prefWidth="301.0" />
+                                    <TextField fx:id="txtTotal" layoutX="254.0" layoutY="192.0" prefHeight="25.0" prefWidth="301.0" />
+                                    <Separator layoutX="15.0" layoutY="39.0" prefHeight="2.0" prefWidth="1094.0" />
+                                    <Separator layoutX="6.0" layoutY="225.0" prefHeight="4.0" prefWidth="1108.0" />
+                                    <Button fx:id="btnRegistrarTransaccion" layoutX="702.0" layoutY="252.0" mnemonicParsing="false" onAction="#registrarTransaccion" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Registrar" textFill="WHITE" />
+                                    <Button fx:id="btnNuevaTransaccion" layoutX="458.0" layoutY="252.0" mnemonicParsing="false" onAction="#nuevaTransaccion" style="-fx-background-color: #479B9B; -fx-cursor: hand;" text="Nuevo" textFill="WHITE" />
+                                    <Label layoutX="609.0" layoutY="75.0" text="Dias de alquiler" />
+                                    <TextField fx:id="txtDiasAlquiler" layoutX="734.0" layoutY="71.0" prefHeight="25.0" prefWidth="357.0" />
+                                    <Label layoutX="602.0" layoutY="128.0" text="Cédula del cliente" />
+                                    <TextField fx:id="txtCedulaTransaccion" layoutX="734.0" layoutY="124.0" prefHeight="25.0" prefWidth="356.0" />
+                                    <DatePicker fx:id="datePickerFecha" layoutX="254.0" layoutY="136.0" prefHeight="19.0" prefWidth="299.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="tableViewTransaccion" prefHeight="296.0" prefWidth="1122.0">
+                                      <columns>
+                                        <TableColumn fx:id="columTipoTransaccion" prefWidth="147.0" text="Tipo de transacción" />
+                                        <TableColumn fx:id="columCodigo" minWidth="3.0" prefWidth="118.0" text="Código" />
+                                          <TableColumn fx:id="columCedulaFactura" minWidth="3.0" prefWidth="152.0" text="Cédula Cliente" />
+                                          <TableColumn fx:id="columFecha" minWidth="3.0" prefWidth="147.0" text="Fecha" />
+                                          <TableColumn fx:id="columTotal" prefWidth="186.0" text="Total" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

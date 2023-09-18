@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <Label layoutX="140.0" layoutY="43.0" text="Ingrese la identificacion" />
+      <Label layoutX="140.0" layoutY="93.0" text="Ingrese la contraseña" />
+      <TextField fx:id="txtIdentificacionLogin" layoutX="357.0" layoutY="39.0" prefHeight="25.0" prefWidth="192.0" />
+      <PasswordField fx:id="txtContraseniaLogin" layoutX="357.0" layoutY="89.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="140.0" layoutY="146.0" text="No está registrado? registrese aqui: " />
+      <Button fx:id="btnRegistrar" layoutX="406.0" layoutY="139.0" mnemonicParsing="false" onAction="#abrirGestionAdmin" style="-fx-background-color: transparent;" text="Registrarse" textFill="#3100ae">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Separator layoutX="22.0" layoutY="172.0" prefHeight="0.0" prefWidth="538.0" />
+      <Pane layoutY="175.0" prefHeight="55.0" prefWidth="573.0" style="-fx-background-color: #479B9B;">
+         <children>
+            <Button fx:id="btnVolver" layoutX="157.0" layoutY="13.0" mnemonicParsing="false" onAction="#showVentanaPrincipal" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Volver" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="txtCerrarLogin" layoutX="399.0" layoutY="8.0" mnemonicParsing="false" onAction="#cerrarLogin" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Cerrar" textFill="#ad0000">
+               <font>
+                  <Font name="Baskerville Old Face" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnIniciar" layoutX="278.0" layoutY="13.0" mnemonicParsing="false" onAction="#showVentanaAdministrador" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Iniciar" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCorreo" layoutX="26.0" layoutY="11.0" mnemonicParsing="false" onAction="#recuperarConCorreo" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Correo" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="109.0" fitWidth="113.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../login.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

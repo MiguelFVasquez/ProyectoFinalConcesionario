@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CrearAdminController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Gestion de Administradores">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="645.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="110.0" layoutY="40.0" orientation="VERTICAL" prefHeight="560.0" prefWidth="679.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="40.0" layoutY="52.0" text="Nombre(s):" />
+                                    <Label layoutX="44.0" layoutY="90.0" text="Apellidos" />
+                                    <Label layoutX="44.0" layoutY="130.0" text="Cedula" />
+                                    <Label layoutX="39.0" layoutY="172.0" text="Contraseña" />
+                                    <TextField fx:id="txtNombreAdministrador" layoutX="294.0" layoutY="48.0" prefHeight="25.0" prefWidth="300.0" />
+                                    <TextField fx:id="txtApellidoAdministrador" layoutX="294.0" layoutY="86.0" prefHeight="25.0" prefWidth="299.0" />
+                                    <TextField fx:id="txtCedulaAdministrador" layoutX="294.0" layoutY="126.0" prefHeight="25.0" prefWidth="297.0" />
+                                    <Button fx:id="btnNuevo" layoutX="156.0" layoutY="219.0" mnemonicParsing="false" onAction="#nuevoAdmin" text="Nuevo" />
+                                    <Button fx:id="btnActualizar" layoutX="251.0" layoutY="219.0" mnemonicParsing="false" onAction="#actualizarAdmin" text="Actualizar" />
+                                    <Button fx:id="btnAgregar" layoutX="385.0" layoutY="219.0" mnemonicParsing="false" onAction="#agregarAdmin" text="Agregar" />
+                                    <Label layoutX="17.0" layoutY="6.0" text="Informacion del administrador">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="14.0" layoutY="22.0" prefHeight="0.0" prefWidth="628.0" />
+                                    <Separator layoutX="17.0" layoutY="209.0" prefHeight="2.0" prefWidth="645.0" />
+                                    <Button fx:id="btnLimpiar" layoutX="509.0" layoutY="219.0" mnemonicParsing="false" onAction="#limpiarInfoAdmin" text="Limpiar" />
+                                    <PasswordField fx:id="txtContrasenia" layoutX="294.0" layoutY="168.0" prefHeight="25.0" prefWidth="293.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="tableViewAdministradores" layoutX="24.0" layoutY="36.0" prefHeight="186.0" prefWidth="630.0">
+                                       <columns>
+                                          <TableColumn fx:id="columNombreAdmin" prefWidth="75.0" text="Nombres" />
+                                          <TableColumn fx:id="columApellidosAdmin" prefWidth="75.0" text="Apellidos" />
+                                          <TableColumn fx:id="columCedulaAdmin" prefWidth="75.0" text="Cedula" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="btnEliminar" layoutX="404.0" layoutY="225.0" mnemonicParsing="false" onAction="#eliminarAdmin" text="Eliminar" />
+                                    <Label layoutX="31.0" layoutY="6.0" text="Listado de clientes">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="27.0" layoutY="22.0" prefHeight="4.0" prefWidth="625.0" />
+                                    <Button fx:id="btnVolver" layoutX="272.0" layoutY="225.0" mnemonicParsing="false" onAction="#mostrarVentanPrincipal" text="Volver" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

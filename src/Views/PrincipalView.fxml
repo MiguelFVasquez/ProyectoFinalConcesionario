@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="386.0" prefWidth="616.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PrincipalController">
+   <children>
+      <ImageView fx:id="paneEmpleado" fitHeight="154.0" fitWidth="130.0" layoutX="81.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../inicioEmpleado.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="paneAdmin" fitHeight="154.0" fitWidth="130.0" layoutX="422.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../inicioEmpleado.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="84.0" text="¿Quien desea ingresar?" textFill="WHITE" AnchorPane.leftAnchor="197.0">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEmpleado" layoutX="89.0" layoutY="293.0" mnemonicParsing="false" onAction="#abrirViewEmpleado" prefHeight="27.0" prefWidth="115.0" text="Empleado" />
+      <Button fx:id="btnAdministrador" layoutX="422.0" layoutY="293.0" mnemonicParsing="false" onAction="#abrirViewAdministrador" prefHeight="27.0" prefWidth="115.0" text="Administrador" />
+      <Button fx:id="btnCerrar" layoutX="280.0" layoutY="350.0" mnemonicParsing="false" onAction="#cerrarPrincipal" prefHeight="22.0" prefWidth="71.0" text="Cerrar" />
+      <Separator layoutX="47.0" layoutY="269.0" prefWidth="200.0" />
+      <Separator layoutX="380.0" layoutY="269.0" prefWidth="200.0" />
+      <Pane prefHeight="73.0" prefWidth="616.0" style="-fx-background-color: #479B9B;">
+         <children>
+            <Label layoutX="208.0" layoutY="20.0" text="Concesionario UQ" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
